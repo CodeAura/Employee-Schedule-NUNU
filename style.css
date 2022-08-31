@@ -114,7 +114,7 @@ body {
 @media screen and (max-width: 576px) {
     .section-LOGIN .container {
         position: relative;
-        margin: 0 auto;
+        margin: -0 auto;
         margin-top: 1vh;
         display: flex;
         flex-direction: column;
@@ -130,7 +130,12 @@ body {
 	      -webkit-transform: scale(0.9); /* Safari 3-8 */
 	      transform: scale(1.);
       }
-
+      .section-LOGIN .container:hover {
+        margin-top: -1vh;
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(1); /* Safari 3-8 */
+        transform: scale(1.);
+}
 }
   
   .section-LOGIN h1 {
