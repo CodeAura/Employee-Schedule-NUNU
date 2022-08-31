@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
 <title>MijnNunu</title>
 <meta charset="UTF-8">
@@ -10,6 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<base href="mynunu.netlify.app" target="_self">
 </head>
 
 <body>
@@ -23,21 +25,21 @@
         <img src="https://nunu.nl/static/assets/img/person4.png">
 </div>
 </div>
-    <form name="login" method="post" action="/calender/">
-    <div class="section-LOGIN">
-        <div class="container">
-            <h1>Log in</h1>
-        <p id=sub-title>Personeelsrooster</p>
-        <br><br>
-        <input type="text" input required id="username">
-        <label for="text"><span>Gebruikersnaam</span></label>
-        <input type="password" name="" id="password" required>
-        <label for="password"><span>Wachtwoord</span></label>
-        <button type="submit" onclick="login()">Inloggen</button>
-        <br>
+    <form name="login" method="post" action="calender.html">
+        <div class="section-LOGIN">
+            <div class="container">
+                <h1>Log in</h1>
+                    <p id=sub-title>Personeelsrooster</p>
+                    <br><br>
+                    <input type="text" input required id="username">
+                    <label for="text"><span>Gebruikersnaam</span></label>
+                    <input type="password" name="" id="password" required>
+                    <label for="password"><span>Wachtwoord</span></label>
+                    <button type="submit" onclick="login()">Inloggen</button>
+                <br>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 <script src="script.js"></script>
 </body>
 </html>
