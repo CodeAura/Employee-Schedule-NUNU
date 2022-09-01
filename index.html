@@ -11,9 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-<base href="mynunu.netlify.app" target="_self">
 </head>
-
 <body>
 <div class="container">
     <div class="background">
@@ -22,24 +20,25 @@
         </div>
     </div>
 <div class="image-logo">
-        <img src="https://nunu.nl/static/assets/img/person4.png">
+        <img src="https://nunu.nl/static/assets/img/person4.png"></img>
+    </div>
 </div>
-</div>
-    <form name="login" method="post" action="calender.html">
+    <form name="login" action="/calender.html" method="get" type="_self"> 
         <div class="section-LOGIN">
             <div class="container">
                 <h1>Log in</h1>
                     <p id=sub-title>Personeelsrooster</p>
                     <br><br>
-                    <input type="text" input required id="username">
+                    <input type="text" input required id="username"></input>
                     <label for="text"><span>Gebruikersnaam</span></label>
-                    <input type="password" name="" id="password" required>
+                    <input type="password" name="" id="password" required></input>
                     <label for="password"><span>Wachtwoord</span></label>
-                    <button type="submit" onclick="login()">Inloggen</button>
+                    <button id="btn" type="submit">Inloggen</button>
                 <br>
             </div>
         </div>
     </form>
 <script src="script.js"></script>
+<script src="/database/database.js"></script>
 </body>
 </html>

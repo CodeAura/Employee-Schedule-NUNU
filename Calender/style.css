@@ -1,12 +1,12 @@
 /* general stuff */
 
 :root {
-    --grid-color: #cecece;
-    --time-color: #777;
-    --slot-hover-color: #eee;
+    --grid-color: #ffffff;
+    --time-color: rgb(204, 204, 204);
+    --slot-hover-color: rgb(39, 39, 39);
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --font-color: #222;
-    --color-red: rgb(190, 35, 15);
+    --font-color: rgb(255, 255, 255);
+    --color-red: rgb(#ff0000);
     --color-blue: rgb(54, 92, 175);
     --color-green: rgb(21, 129, 21);
     --color-orange: rgb(233, 153, 4);
@@ -22,7 +22,21 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: var(--font-color);
+    overflow: overlay;
+    
 }
+::-webkit-scrollbar {
+	width: 6px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-track{
+	background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+	background:#ff0000;
+    width:10px;
+	border-radius: 10px;
+  }
 
 input,
 textarea {
@@ -34,6 +48,40 @@ textarea {
 
 /* header */
 
+.background {
+    background-color: #323232;
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -webkit-fill-available;
+    height: auto;
+    
+}
+
+.image-background {
+    z-index: 0;
+    background-image: url('https://nunu.nl/media/filer_public_thumbnails/filer_public/0f/c8/0fc8bd9a-5f0d-415f-9cb9-1449826950b2/produlab-foto-5.jpg__2646x1323_q85_crop_subsampling-2_upscale.jpg');
+    margin: 0 auto;
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+	background-position: center;
+    opacity: 0.2;
+    overflow: hidden;
+    transform: scale(1) rotateX(0);
+	box-shadow: 0 0 40px rgba(0,0,0,0.2);
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;
+	-webkit-transition-delay: 400ms;
+	transition-delay: 400ms;
+	transform-origin: top center;
+}
+
 .header {
     text-align: center;
     padding: 20px 10px;
@@ -43,8 +91,9 @@ textarea {
     justify-content: center;
 }
 
-.header h1 {
-    color: var(--color-blue);
+.header img {
+    width:  10%;
+    height: 10%;
     font-weight: 400;
 }
 
@@ -93,10 +142,15 @@ textarea {
 /* calendar */
 
 #calendar {
+    color: white;
+    text-align: center;
     display: flex;
     width: 100%;
     transition: opacity 200ms ease-in;
     border-bottom: 1px solid var(--grid-color);
+    -ms-transform: scale(0.9); /* IE 9 */
+	  -webkit-transform: scale(0.9); /* Safari 3-8 */
+	  transform: scale(1.);
 }
 
 #calendar.opaque {
@@ -150,6 +204,7 @@ textarea {
 .time {
     border-top: 1px solid var(--grid-color);
     height: var(--slotHeight);
+    color:rgb(255, 255, 255)
 }
 
 .time {
@@ -174,7 +229,7 @@ textarea {
     width: calc(100% - 2px);
     border-radius: 4px;
     padding: 2px 5px;
-    color: white;
+    color: rgb(255, 255, 255);
     overflow: hidden;
     cursor: pointer;
 }
@@ -194,7 +249,7 @@ textarea {
 
 #eventModal {
     display: none;
-    background-color: white;
+    background-color: rgb(39, 39, 39);
     border-radius: 10px;
     box-shadow: 0px 0px 20px var(--shadow-color);
     left: 50%;
@@ -221,13 +276,17 @@ textarea {
     margin: 20px 10px 5px 0px;
 }
 
+
+
 .shortInput {
-    border-bottom: 1px solid var(--grid-color);
+    background-color: #323232;
+    color: white;
+    border: 2px solid #777;
     padding: 2px 1px;
 }
 
 .shortInput:focus {
-    border-bottom: 1px solid var(--font-color);
+    border-bottom: 3px solid #777;
 }
 
 #eventTitle {
@@ -243,7 +302,9 @@ textarea {
 }
 
 #eventDescription {
-    border: 1px solid var(--grid-color);
+    color: white;
+    background-color: #323232;
+    border: 2px solid #777;
     width: 95% !important;
     height: 170px;
     min-height: 40px;
@@ -252,7 +313,7 @@ textarea {
 }
 
 #eventDescription:focus {
-    border: 1px solid var(--font-color);
+    border: 3px solid #777
 }
 
 #eventControls {
@@ -262,7 +323,7 @@ textarea {
 .button {
     padding: 10px 20px;
     background-color: var(--color-blue);
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     margin-right: 12px;
     border-radius: 2px;

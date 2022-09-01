@@ -10,23 +10,30 @@ labels.forEach(label => {
   console.log(label.innerHTML);
 });
 
+
+document.getElementById("btn").onclick = function() {login()};
+
+
 function login() {
-    var uname = document.form["login"]["username"].value;
-    var pass = document.form["login"]["password"].value;
+  var uname = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
 
-    if((!isEmpty(uname, "Log In")) && (!isEmpty(pass, "Password"))){
+    if((!isEmpty(uname, "Log In")) && (!isEmpty(pass, "Password"))) {
 
+        alert("u bent ingelogd")
+        window.location.href("/calender.html")
         return true;
     }else{
         return false;
+
     }
-}
 
 function isEmpty(elemValue, field){
     if((elemValue == "") || (elemValue == null)){
-        alert("you can not have "+field+" field empty");
+        alert("u kunt "+field+" niet leeglaten");
         return true;
     }else{
         return false;
     }
+  }
 }
