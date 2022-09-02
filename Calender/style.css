@@ -6,7 +6,7 @@
     --slot-hover-color: rgb(39, 39, 39);
     --shadow-color: rgba(0, 0, 0, 0.3);
     --font-color: rgb(255, 255, 255);
-    --color-red: rgb(#ff0000);
+    --color-red: rgb(rgb(201, 5, 5));
     --color-blue: rgb(54, 92, 175);
     --color-green: rgb(21, 129, 21);
     --color-orange: rgb(233, 153, 4);
@@ -142,7 +142,12 @@ textarea {
 /* calendar */
 
 #calendar {
-    color: white;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     text-align: center;
     display: flex;
     width: 100%;
@@ -151,6 +156,16 @@ textarea {
     -ms-transform: scale(0.9); /* IE 9 */
 	  -webkit-transform: scale(0.9); /* Safari 3-8 */
 	  transform: scale(1.);
+}
+
+@media screen and (max-width: 1080px) {
+    #calendar {
+        margin-top: -4vh;
+        -ms-transform: scale(0.8); /* IE 9 */
+	    -webkit-transform: scale(0.8); /* Safari 3-8 */
+	    transform: scale(1.);
+    }
+    
 }
 
 #calendar.opaque {
@@ -326,7 +341,7 @@ textarea {
     color: rgb(255, 255, 255);
     cursor: pointer;
     margin-right: 12px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 #deleteButton {
@@ -352,7 +367,7 @@ textarea {
     width: 20px !important;
     height: 20px !important;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid rgb(59, 59, 59);
     box-sizing: content-box;
     cursor: pointer;
 }
@@ -360,11 +375,11 @@ textarea {
 .color.active,
 .color:focus,
 .color:hover {
-    border: 5px solid var(--grid-color);
+    border: 5px solid #838383;
 }
 
 .color-red {
-    background-color: var(--color-red);
+    background-color: #ce0505;
 }
 
 .color-blue {

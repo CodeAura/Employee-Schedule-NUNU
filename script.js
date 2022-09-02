@@ -10,18 +10,13 @@ labels.forEach(label => {
   console.log(label.innerHTML);
 });
 
-
 document.getElementById("btn").onclick = function() {login()};
-
 
 function login() {
   var uname = document.getElementById("username").value;
   var pass = document.getElementById("password").value;
 
     if((!isEmpty(uname, "Log In")) && (!isEmpty(pass, "Password"))) {
-
-        alert("u bent ingelogd")
-        window.location.href("/calender.html")
         return true;
     }else{
         return false;
@@ -37,3 +32,5 @@ function isEmpty(elemValue, field){
     }
   }
 }
+
+var audio = ""
