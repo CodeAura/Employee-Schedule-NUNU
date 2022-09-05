@@ -1,5 +1,2 @@
-todo.txt
-package.JSON
-database/package.JSON
-package-location.JSON
-
+.env
+/important/node_modules
