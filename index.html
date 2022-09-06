@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MijnNunu</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/style_login.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+<div class="container">
+    <div class="background">
+        <div class="image-background">
+            </div>
+        </div>
+    </div>
+<div class="image-logo">
+        <img src="https://nunu.nl/static/assets/img/person4.png"></img>
+    </div>
+</div>
+    <form name="login" action='/home' method="get" target="_self"> 
+        <div class="section-LOGIN">
+            <div class="container">
+                <h1>Log in</h1>
+                    <p id=sub-title>Personeelsrooster</p>
+                    <br><br>
+                    <input id="username" type="text" input required></input>
+                    <label for="text"><span>Gebruikersnaam</span></label>
+                    <input id="password" type="password" name="" required></input>
+                    <label for="password"><span>Wachtwoord</span></label>
+                    <button id="btn" type="submit">Inloggen</button>
+                <br>
+            </div>
+        </div>
+    </form>
+<script src="/views/script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
